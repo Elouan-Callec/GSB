@@ -205,15 +205,9 @@ ERREUR SQL : 11 Mar 2021 - 17:00:38.000000 --> UPDATE visiteurmedical
 			cp ="",
 			dateEmbauche =""
 		WHERE id = "10002" : (Incorrect date value: '' for column 'dateEmbauche' at row 1) 
-ERREUR SQL : 18 Mar 2021 - 15:53:12.000000 --> INSERT INTO visiteurmedical (nom,prenom,adresse,ville,dateEmbauche,cp)
-VALUES ('fhsdfh','hdrhr','grssdhrsd',
-'brest','2021-03-06','25959'); : (Field 'login' doesn't have a default value) 
-ERREUR SQL : 18 Mar 2021 - 15:58:30.000000 --> INSERT INTO visiteurmedical (nom,prenom,adresse,ville,dateEmbauche,cp)
-VALUES ('fhsdfh','hdrhr','grssdhrsd',
-'brest','2021-03-06','25959','Celia','password'); : (Column count doesn't match value count at row 1) 
-ERREUR SQL : 18 Mar 2021 - 16:02:33.000000 --> UPDATE visiteurmedical
+ERREUR SQL : 18 Mar 2021 - 16:09:06.000000 --> UPDATE visiteurmedical
 		SET id = "10004",
-			nom = "fhsdfh",
+			nom = "f",
 			prenom = "hdrhr",
 			adresse ="grssdhrsd",
 			ville ="brest",
@@ -224,144 +218,105 @@ ERREUR SQL : 18 Mar 2021 - 16:02:33.000000 --> UPDATE visiteurmedical
 		WHERE id = "10004" : (You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'login =""
 			mdp =""
 		WHERE id = "10004"' at line 9) 
-ERREUR SQL : 18 Mar 2021 - 16:03:43.000000 --> UPDATE visiteurmedical
+ERREUR SQL : 18 Mar 2021 - 16:09:57.000000 --> UPDATE visiteurmedical
 		SET id = "10004",
-			nom = "fhsdfh",
-			prenom = "hdrhr",
-			adresse ="grssdhrsd",
-			ville ="brest",
-			cp ="25959",
-			dateEmbauche ="2021-03-06"
-			login ="fdgrdgdgrgr"
-			mdp ="gtfhfhtf"
-		WHERE id = "10004" : (You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'login ="fdgrdgdgrgr"
-			mdp ="gtfhfhtf"
-		WHERE id = "10004"' at line 9) 
-ERREUR SQL : 18 Mar 2021 - 16:03:43.000000 --> UPDATE visiteurmedical
-		SET id = "10004",
-			nom = "fhsdfh",
-			prenom = "hdrhr",
-			adresse ="grssdhrsd",
-			ville ="brest",
-			cp ="25959",
-			dateEmbauche ="2021-03-06"
-			login ="fdgrdgdgrgr"
-			mdp ="gtfhfhtf"
-		WHERE id = "10004" : (You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'login ="fdgrdgdgrgr"
-			mdp ="gtfhfhtf"
-		WHERE id = "10004"' at line 9) 
-ERREUR SQL : 18 Mar 2021 - 16:03:44.000000 --> UPDATE visiteurmedical
-		SET id = "10004",
-			nom = "fhsdfh",
-			prenom = "hdrhr",
-			adresse ="grssdhrsd",
-			ville ="brest",
-			cp ="25959",
-			dateEmbauche ="2021-03-06"
-			login ="fdgrdgdgrgr"
-			mdp ="gtfhfhtf"
-		WHERE id = "10004" : (You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'login ="fdgrdgdgrgr"
-			mdp ="gtfhfhtf"
-		WHERE id = "10004"' at line 9) 
-ERREUR SQL : 18 Mar 2021 - 16:03:44.000000 --> UPDATE visiteurmedical
-		SET id = "10004",
-			nom = "fhsdfh",
-			prenom = "hdrhr",
-			adresse ="grssdhrsd",
-			ville ="brest",
-			cp ="25959",
-			dateEmbauche ="2021-03-06"
-			login ="fdgrdgdgrgr"
-			mdp ="gtfhfhtf"
-		WHERE id = "10004" : (You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'login ="fdgrdgdgrgr"
-			mdp ="gtfhfhtf"
-		WHERE id = "10004"' at line 9) 
-ERREUR SQL : 18 Mar 2021 - 16:03:44.000000 --> UPDATE visiteurmedical
-		SET id = "10004",
-			nom = "fhsdfh",
-			prenom = "hdrhr",
-			adresse ="grssdhrsd",
-			ville ="brest",
-			cp ="25959",
-			dateEmbauche ="2021-03-06"
-			login ="fdgrdgdgrgr"
-			mdp ="gtfhfhtf"
-		WHERE id = "10004" : (You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'login ="fdgrdgdgrgr"
-			mdp ="gtfhfhtf"
-		WHERE id = "10004"' at line 9) 
-ERREUR SQL : 18 Mar 2021 - 16:03:44.000000 --> UPDATE visiteurmedical
-		SET id = "10004",
-			nom = "fhsdfh",
-			prenom = "hdrhr",
-			adresse ="grssdhrsd",
-			ville ="brest",
-			cp ="25959",
-			dateEmbauche ="2021-03-06"
-			login ="fdgrdgdgrgr"
-			mdp ="gtfhfhtf"
-		WHERE id = "10004" : (You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'login ="fdgrdgdgrgr"
-			mdp ="gtfhfhtf"
-		WHERE id = "10004"' at line 9) 
-ERREUR SQL : 18 Mar 2021 - 16:03:44.000000 --> UPDATE visiteurmedical
-		SET id = "10004",
-			nom = "fhsdfh",
-			prenom = "hdrhr",
-			adresse ="grssdhrsd",
-			ville ="brest",
-			cp ="25959",
-			dateEmbauche ="2021-03-06"
-			login ="fdgrdgdgrgr"
-			mdp ="gtfhfhtf"
-		WHERE id = "10004" : (You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'login ="fdgrdgdgrgr"
-			mdp ="gtfhfhtf"
-		WHERE id = "10004"' at line 9) 
-ERREUR SQL : 18 Mar 2021 - 16:05:32.000000 --> UPDATE visiteurmedical
-		SET id = "10007",
-			nom = "Jouan",
-			prenom = "Célia",
-			adresse ="14 rue Cervantes",
-			ville ="Brest",
-			cp ="29200",
-			dateEmbauche ="2021-03-06"
-			login ="CeliaJouan"
-			mdp ="password"
-		WHERE id = "10007" : (You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'login ="CeliaJouan"
-			mdp ="password"
-		WHERE id = "10007"' at line 9) 
-ERREUR SQL : 18 Mar 2021 - 16:07:41.000000 --> UPDATE visiteurmedical
-		SET id = "10007",
-			nom = "Jouan",
-			prenom = "Celia",
-			adresse ="14 rue Cervantes",
-			ville ="Brest",
-			cp ="29200",
-			dateEmbauche ="2021-03-06"
-			login =""
-			mdp =""
-		WHERE id = "10007" : (You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'login =""
-			mdp =""
-		WHERE id = "10007"' at line 9) 
-ERREUR SQL : 18 Mar 2021 - 16:13:19.000000 --> UPDATE visiteurmedical
-		SET id = "10009",
-			nom = "Alves",
-			prenom = "Charles",
-			adresse ="65 rue capucin",
-			ville ="Vannes",
-			cp ="56610",
-			dateEmbauche ="2004-05-07"
-			login =""
-			mdp =""
-		WHERE id = "10009" : (You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'login =""
-			mdp =""
-		WHERE id = "10009"' at line 9) 
-ERREUR SQL : 8 Apr 2021 - 15:14:05.000000 --> UPDATE visiteurmedical
-		SET id = "10004",
-			nom = "fhsdfhzebi",
+			nom = "f",
 			prenom = "hdrhr",
 			adresse ="grssdhrsd",
 			ville ="brest",
 			cp ="25959",
 			dateEmbauche ="2021-03-06",
 			login ="",
-			mdp =""
-		WHERE id = "10004" : (Unknown column 'login' in 'field list') 
+			mdp ="",
+		WHERE id = "10004" : (You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE id = "10004"' at line 11) 
+ERREUR SQL : 18 Mar 2021 - 16:09:58.000000 --> UPDATE visiteurmedical
+		SET id = "10004",
+			nom = "f",
+			prenom = "hdrhr",
+			adresse ="grssdhrsd",
+			ville ="brest",
+			cp ="25959",
+			dateEmbauche ="2021-03-06",
+			login ="",
+			mdp ="",
+		WHERE id = "10004" : (You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE id = "10004"' at line 11) 
+ERREUR SQL : 18 Mar 2021 - 16:09:59.000000 --> UPDATE visiteurmedical
+		SET id = "10004",
+			nom = "f",
+			prenom = "hdrhr",
+			adresse ="grssdhrsd",
+			ville ="brest",
+			cp ="25959",
+			dateEmbauche ="2021-03-06",
+			login ="",
+			mdp ="",
+		WHERE id = "10004" : (You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE id = "10004"' at line 11) 
+ERREUR SQL : 18 Mar 2021 - 16:09:59.000000 --> UPDATE visiteurmedical
+		SET id = "10004",
+			nom = "f",
+			prenom = "hdrhr",
+			adresse ="grssdhrsd",
+			ville ="brest",
+			cp ="25959",
+			dateEmbauche ="2021-03-06",
+			login ="",
+			mdp ="",
+		WHERE id = "10004" : (You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE id = "10004"' at line 11) 
+ERREUR SQL : 18 Mar 2021 - 16:09:59.000000 --> UPDATE visiteurmedical
+		SET id = "10004",
+			nom = "f",
+			prenom = "hdrhr",
+			adresse ="grssdhrsd",
+			ville ="brest",
+			cp ="25959",
+			dateEmbauche ="2021-03-06",
+			login ="",
+			mdp ="",
+		WHERE id = "10004" : (You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE id = "10004"' at line 11) 
+ERREUR SQL : 18 Mar 2021 - 16:09:59.000000 --> UPDATE visiteurmedical
+		SET id = "10004",
+			nom = "f",
+			prenom = "hdrhr",
+			adresse ="grssdhrsd",
+			ville ="brest",
+			cp ="25959",
+			dateEmbauche ="2021-03-06",
+			login ="",
+			mdp ="",
+		WHERE id = "10004" : (You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE id = "10004"' at line 11) 
+ERREUR SQL : 18 Mar 2021 - 16:10:00.000000 --> UPDATE visiteurmedical
+		SET id = "10004",
+			nom = "f",
+			prenom = "hdrhr",
+			adresse ="grssdhrsd",
+			ville ="brest",
+			cp ="25959",
+			dateEmbauche ="2021-03-06",
+			login ="",
+			mdp ="",
+		WHERE id = "10004" : (You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE id = "10004"' at line 11) 
+ERREUR SQL : 18 Mar 2021 - 16:10:00.000000 --> UPDATE visiteurmedical
+		SET id = "10004",
+			nom = "f",
+			prenom = "hdrhr",
+			adresse ="grssdhrsd",
+			ville ="brest",
+			cp ="25959",
+			dateEmbauche ="2021-03-06",
+			login ="",
+			mdp ="",
+		WHERE id = "10004" : (You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE id = "10004"' at line 11) 
+ERREUR SQL : 18 Mar 2021 - 16:10:07.000000 --> UPDATE visiteurmedical
+		SET id = "10004",
+			nom = "fh",
+			prenom = "hdrhr",
+			adresse ="grssdhrsd",
+			ville ="brest",
+			cp ="25959",
+			dateEmbauche ="2021-03-06",
+			login ="",
+			mdp ="",
+		WHERE id = "10004" : (You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE id = "10004"' at line 11) 
+ERREUR SQL : 18 Mar 2021 - 16:10:58.000000 --> INSERT INTO visiteurmedical (nom,prenom,adresse,ville,dateEmbauche,cp,login,mdp)
+VALUES ('Callec','Elouan','14 hameaux de keruscat',
+'Ploudalmézeau','2013-04-30','29830','Elouan','test',); : (You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 3) 
