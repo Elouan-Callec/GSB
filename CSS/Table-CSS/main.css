@@ -1,0 +1,153 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100);
+
+body {
+  font-family: "Roboto", helvetica, arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+}
+
+
+/*** Table Styles **/
+
+.table-fill {
+  background-color: #00aaa9;
+  border-radius:3px;
+  border-collapse: collapse;
+  margin: auto;
+  max-width: 1140px;
+  padding:5px;
+  width: 100%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  animation: float 5s infinite;
+  font-weight: 600;
+}
+ 
+th {
+  color:#FFFFFF;;
+  background-color: #145757;
+  border-bottom:4px solid #00aaa9;
+  border-right: 1px solid #00aaa9;
+  font-size:16px;
+  font-weight: 600;
+  padding:24px;
+  text-align:left;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  vertical-align:middle;
+}
+
+th:first-child {
+  border-top-left-radius:3px;
+}
+ 
+th:last-child {
+  border-top-right-radius:3px;
+  border-right:none;
+}
+  
+tr {
+  border-top: 1px solid rgb(144, 200, 255);
+  border-bottom: 1px solid rgb(144, 200, 255);
+  color:#000000;
+  font-size:12px;
+  font-weight:600;
+  text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
+}
+ 
+tr:hover td {
+  background:rgb(144, 200, 255);
+  color:#FFFFFF;
+  border-top: 1px solid #22262e;
+}
+ 
+tr:first-child {
+  border-top:none;
+}
+
+tr:last-child {
+  border-bottom:1px;
+}
+ 
+tr:nth-child(odd) td {
+  background:#00aaa9;
+   border-bottom: 1px solid rgb(144, 200, 255);
+}
+ 
+tr:nth-child(odd):hover td {
+  background:rgb(98, 99, 100);
+}
+
+tr:last-child td:first-child {
+  border-bottom-left-radius:3px;
+}
+ 
+tr:last-child td:last-child {
+  border-bottom-right-radius:3px;
+}
+ 
+td {
+  background:#00aaa9;
+  padding:10px;
+  text-align:left;
+  vertical-align:middle;
+  font-weight:300;
+  font-size:16px;
+  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+  border-right: 1px solid #666B85;
+}
+
+td:last-child {
+  border-right: 0px;
+}
+
+th.text-left {
+  text-align: left;
+}
+
+th.text-center {
+  text-align: center;
+}
+
+th.text-right {
+  text-align: right;
+}
+
+td.numDossier{
+  text-align: left;
+  width: 20px;
+}
+
+td.dteEntree{
+  text-align: center;
+  width: 30px;
+}
+
+td.nomPatient{
+  text-align: center;
+  width: 50px;
+}
+
+td.motifAdmission{
+  text-align: left;
+  width: 87px;
+}
+
+td.nomMedecinTraitant{
+  text-align: left;
+  width: 132px;
+}
+
+td.dteFin{
+  text-align: left;
+  width: 100px;
+}
+
+td.supprimer{
+  text-align: center;
+  width: 15px;
+}
+
+td.edit{
+  text-align: center;
+  width: 15px;
+}
