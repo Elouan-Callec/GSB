@@ -3,9 +3,9 @@
 function connexion(){
     $host = "127.0.0.1";
         $user = "root";
-        $password = "password";
+        $password = "";
         $dbname = "gsb_frais";
-        $port ="3307";
+        $port ="3306";
 
         $mysqli = new mysqli($host, $user, $password, $dbname, $port);
         if ($mysqli->connect_errno) {
@@ -15,14 +15,13 @@ function connexion(){
         return $mysqli;
 
 }
-   
+       
 function erreurSQL() {
     global $cnxBDD;
     
     $err = mysql_errno($link) . ": " . mysql_error($cnxBDD). "\n";
     return $err;
 }
-
 
 function afficheErreur($sql, $erreur) {
 

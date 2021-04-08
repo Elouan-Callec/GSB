@@ -4,8 +4,8 @@
 <head>
 	<title>Création de Contact</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" type="text/css" href="./CSS/Table-CSS/main.css">
-	<link rel="stylesheet" type="text/css" href="./CSS/style.css">
+    <link rel="stylesheet" type="text/css" href="default.css">
+	<link rel="stylesheet" type="text/css" href="default.css">
 </head>
 
 <body>
@@ -14,7 +14,7 @@
 	include "mesFonctionsGenerales.php";
 
 	/* On regarde si on est dans le cas d'une modification */
-	if ( isset($_GET['BOmodif'] ) )
+	if ( isset($_GET['BOmodif'] ) ==true)
 	{
 		$monTraitement = "Update.php";		/* Traitement SQL à appeler après la FORM */
 		$monAction = "Modif";
@@ -24,17 +24,16 @@
 
         $sql = "SELECT id, nom, prenom, adresse, ville, cp, dateEmbauche
 				 FROM visiteurmedical
-				 WHERE id = ".$_GET['BOmodif'].";";
+				 WHERE id = ".$_GET['id'].";";
 
         $result = $cnxBDD->query($sql);
 		$maLigne = $result->fetch_assoc();
-
 		$identifiant = $maLigne['id']; //'id' provient de Identifiant en dessous
 		$nom = $maLigne['nom'];
 		$prenom= $maLigne['prenom'];
 		$adresse= $maLigne['adresse'];
 		$ville= $maLigne['ville'];
-		$dateEmbauche = ['dateEmbauche'];
+        $dateEmbauche = $maLigne['dateEmbauche'];
 		$cp = $maLigne['cp'];
     }
     else
@@ -92,7 +91,7 @@
                 <br>
                 <div>
                     <label for="dateEmbauche">Date d'embauche : </label>
-                    <input type="text" id="dateEmbauche" name="dateEmbauche" value= "<?php echo substr($dateEmbauche,8,2); ?>"/>
+                    <input type="text" id="dateEmbauche" name="dateEmbauche" value= "<?php echo $dateEmbauche; ?>"/>
                 </div>
                 <br>
                 <div>

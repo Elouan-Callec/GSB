@@ -2,7 +2,7 @@
 <html>
     <head lang=fr>
        <meta charset="utf-8">
-       <title> gsb forfait </title>
+       <title>gsb</title>
      <head>
     <body>
         <?php 
@@ -19,7 +19,7 @@
 			        case 'C':{ include "./FormContact.php?action=Ajout"; break; }
 			        case 'R':{ include "./FormAfficheContact.php"; break;  }
                     case 'U':{ include "./FormContact.php?action=Modif"; break;  }
-                    case 'D':{ include "./DeleteContact.php"; break;  }
+                    case 'D':{ include "./Delete.php"; break;  }
 			    }
 	        ?>
         </div>

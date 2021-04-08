@@ -18,6 +18,7 @@
     $sql = "SELECT id, nom, prenom FROM visiteurmedical;";
     $lignes = $cnxBDD->query($sql) or die (afficheErreur($sql, $cnxBDD->error_list[0]['error']));
     /* $lignes = array();
+    
     $lignes = $result->fetch_array();*/
 ?>
 
