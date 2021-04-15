@@ -365,3 +365,12 @@ ERREUR SQL : 8 Apr 2021 - 15:14:05.000000 --> UPDATE visiteurmedical
 			login ="",
 			mdp =""
 		WHERE id = "10004" : (Unknown column 'login' in 'field list') 
+ERREUR SQL : 15 Apr 2021 - 16:12:26.000000 --> INSERT INTO visiteurmedical (nom,prenom,adresse,ville,dateEmbauche,cp,login,mdp)
+VALUES ('test','test','adresse',
+'ville','07/12/2020','code postal','login','mdp'); : (Incorrect date value: '07/12/2020' for column 'dateEmbauche' at row 1) 
+ERREUR SQL : 15 Apr 2021 - 16:12:50.000000 --> INSERT INTO visiteurmedical (nom,prenom,adresse,ville,dateEmbauche,cp,login,mdp)
+VALUES ('test','test','adresse',
+'ville','07-12-2020','code postal','login',''); : (Incorrect date value: '07-12-2020' for column 'dateEmbauche' at row 1) 
+ERREUR SQL : 15 Apr 2021 - 16:14:44.000000 --> INSERT INTO visiteurmedical (nom,prenom,adresse,ville,dateEmbauche,cp,login,mdp)
+VALUES ('test','test','adresse',
+'ville','07-12-2020','code postal','login','mdp'); : (Data too long for column 'cp' at row 1) 

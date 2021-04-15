@@ -45,7 +45,7 @@ $cnxBDD = connexion();
         <tbody>
 
             <?php
-            $userReq ='SELECT * FROM visiteurmedical INNER JOIN fichefrais WHERE visiteurmedical.id=fichefrais.id ORDER BY annee;';
+            $userReq ='SELECT * FROM visiteurmedical INNER JOIN fichefrais WHERE visiteurmedical.id=fichefrais.idVisiteur AND visiteurmedical.id="2" ORDER BY annee;';
             $userReq = $cnxBDD -> query($userReq);
             while($userData = $userReq -> fetch_assoc()) {
             ?>
