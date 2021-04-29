@@ -1,0 +1,62 @@
+.t1{
+  border : 2px solid #C2DCFF;
+  text-align: left;
+}
+.t2 td, .t2 th{
+  border: 1px solid #A0C4F2;
+  text-align: center;
+}
+
+th, td{
+  border: 1px solid black;
+  padding: 10px;
+  text-align: left;
+  background-color: white;
+  width: 15%;
+  
+}
+
+h1 {
+  color:white;
+  font-size: 50px;
+  
+}
+h3 {
+  color:white;
+  font-size: 35px;
+  
+}
+
+.tableau {
+width: 100%;
+   
+}
+body {
+  background-color:#A0C4F2 ;
+}
+.logo {
+width:17%;
+display: block;
+margin-left: auto;
+margin-right: auto 
+}
+.logoajouter {
+width:3%;
+display: block;
+float: right;
+}
+
+.creeroumodifier {
+  color: black;
+  }
+
+
+h2 {
+  color:white;
+  font-size: 20px;
+  font-style: normal;
+}
+
+.couleurecriture {
+  color: white;
+}
