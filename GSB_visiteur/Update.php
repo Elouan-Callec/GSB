@@ -1,7 +1,7 @@
 <?php
 
 // connexion à la base
-//include "mesFonctionsGenerales.php";
+include "mesFonctionsGenerales.php";
 $cnxBDD = connexion();
 
 //Infos du contact
