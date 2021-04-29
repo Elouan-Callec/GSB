@@ -43,6 +43,35 @@ function ecritRequeteSQL($uneChaine) {
 	fclose($handle);
 }
 
+function getForfait($unforfait)
+{
+    switch ($unforfait) {
+        case "REP" : 
+            $valeur=29.0;
+            break;
+        case "NUI" : 
+            $valeur=80.0;
+            break;
+        case "K6E" : 
+            $valeur=0.67;
+            break;
+        case "K6D" : 
+            $valeur=0.58;
+            break;
+        case "K4E" : 
+            $valeur=0.62;
+            break;
+        case "K4D" : 
+            $valeur=0.52;
+            break;
+        default : 
+            $valeur=0;
+    }
+    return $valeur;
+}
+
+?>
+
 
 
 ?>

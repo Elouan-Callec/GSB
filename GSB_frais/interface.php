@@ -19,7 +19,7 @@ $cnxBDD = connexion();
 
 
 <p>
-<a href="FormContact.php">
+<a href="fiche_frais.php">
 <img src="https://image.flaticon.com/icons/png/512/32/32360.png" class="logoajouter"></a>
 </p>
 
@@ -45,13 +45,13 @@ $cnxBDD = connexion();
         <tbody>
 
             <?php
-            $userReq ='SELECT * FROM visiteurmedical INNER JOIN fichefrais WHERE visiteurmedical.id=fichefrais.idVisiteur AND visiteurmedical.id="2" ORDER BY annee;';
+            $userReq ='SELECT * FROM visiteurmedical INNER JOIN fichefrais WHERE visiteurmedical.id=fichefrais.idVisiteur AND visiteurmedical.id="2" ORDER BY annee;';//supprimer le AND visiteurmedical quand l'utilisateur sera connecté
             $userReq = $cnxBDD -> query($userReq);
             while($userData = $userReq -> fetch_assoc()) {
             ?>
                 
         <tr>
-            <td><?php echo $userData ['id']; ?></td>
+            <td><?php echo $userData ['idVisiteur']; ?></td>
             <td><?php echo $userData ['nom']; ?></td>
             <td><?php echo $userData ['prenom']; ?></td>
             <td><?php echo $userData ['mois']; ?></td>
@@ -60,7 +60,7 @@ $cnxBDD = connexion();
             <td><?php echo $userData ['idEtat']; ?></td>
 
             <td><a href="Delete.php?id= <?php echo $userData ['id']; ?>"><img src="https://cours-informatique-gratuit.fr/wp-content/uploads/2014/05/corbeille-windows.png" class='logo'></a></td>
-            <td><a href="FormContact.php?id=<?php echo $userData ['id']; ?>&BOmodif=1"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWRISakacXylDQFihhmvVa6OgKa-j40CTq0Q&usqp=CAU" class='logo'></a></td>
+            <td><a href="fiche_frais.php?id=<?php echo $userData ['id']; ?>&BOmodif=1"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWRISakacXylDQFihhmvVa6OgKa-j40CTq0Q&usqp=CAU" class='logo'></a></td>
             <td><?php echo "pas fini" ?></td>
             
             
@@ -81,7 +81,7 @@ $cnxBDD = connexion();
 <!-- 
 <td>
     <a href="Delete.php?id= 
-        <form action='FormContact.php' method='get'>
+        <form action='fiche_frais.php' method='get'>
             <button type='submit' onclick=\"if(!confirm('Voulez-vous supprimer ce contact ?')) return false;\">
             <img src="https://cours-informatique-gratuit.fr/wp-content/uploads/2014/05/corbeille-windows.png">
             </button>
