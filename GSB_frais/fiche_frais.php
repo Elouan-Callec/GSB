@@ -25,9 +25,13 @@ if ( isset($_GET['BOmodif'] ) ==true)
              FROM fichefrais
              WHERE id = ".$_GET['id'].";";
 
+    /*$nuitees="pas fini";
+    $repasmidi="pas fini";
+    $etape="pas fini";
+    $km="pas fini";*/
     $result = $cnxBDD->query($sql);
     $maLigne = $result->fetch_assoc();
-    $identifiant = $maLigne['id']; //'id' provient de Identifiant en dessous
+    $identifiant = $maLigne['id'];
     $idVisiteur = $maLigne['idVisiteur'];
     $mois= $maLigne['mois'];
     $annee= $maLigne['annee'];
@@ -36,6 +40,27 @@ if ( isset($_GET['BOmodif'] ) ==true)
     $dateModif = $maLigne['dateModif'];
     $idEtat = $maLigne['idEtat'];
 
+    $get_data="SELECT idForfait, quantite 
+                FROM lignefraisforfait 
+                WHERE idFichefrais = 3;";
+    $get_data=$cnxBDD -> query($get_data);
+    
+    while ($elements=$get_data -> fetch_assoc()){     
+        switch ($elements['idForfait']){
+            case 'NUI':
+                $nuitees=$elements['quantite'];
+                break;
+            case 'REP':
+                $repasmidi=$elements['quantite'];
+                break;
+            case 'ETA' :
+                $etape=$elements['quantite'];
+                break;
+            case 'KM' : 
+                $km=$elements['quantite'];
+                break;
+        }
+    }
 }
 else
 {
@@ -53,7 +78,6 @@ else
     $nuitees = '';
     $etape='';
     $km = '';
-    
 }
 ?>
 	        

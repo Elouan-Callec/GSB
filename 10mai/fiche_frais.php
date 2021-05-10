@@ -10,9 +10,7 @@
 <body>
 <?php
 
-
 include "mesFonctionsGenerales.php";
-
 
 /* On regarde si on est dans le cas d'une modification */
 if ( isset($_GET['BOmodif'] ) ==true)
@@ -31,7 +29,7 @@ if ( isset($_GET['BOmodif'] ) ==true)
     $repasmidi=0;
     $result = $cnxBDD->query($sql);
     $maLigne = $result->fetch_assoc();
-    $identifiant = $maLigne['id']; //'id' provient de Identifiant en dessous
+    $identifiant = $maLigne['id'];
     $idVisiteur = $maLigne['idVisiteur'];
     $mois= $maLigne['mois'];
     $annee= $maLigne['annee'];
@@ -43,19 +41,22 @@ if ( isset($_GET['BOmodif'] ) ==true)
     $get_data="SELECT idForfait, quantite 
                 FROM lignefraisforfait 
                 WHERE idFichefrais =".$_GET['id'].";";
-        $get_data=$cnxBDD -> query($get_data);
-        while ($elements=$get_data -> fetch_assoc()) 
-        {     
-    
-    switch ($elements['idForfait']){
-        case 'NUI':
-            $nuitees=$elements['quantite'];
-            break;
-        case 'REP':
-            $repasmidi=$elements['quantite'];
-            break;
-
-  
+    $get_data=$cnxBDD -> query($get_data);
+        
+    while ($elements=$get_data -> fetch_assoc()){     
+        switch ($elements['idForfait']){
+            case 'NUI':
+                $nuitees=$elements['quantite'];
+                break;
+            case 'REP':
+                $repasmidi=$elements['quantite'];
+                break;
+            case 'ETA' :
+                $etape=$elements['quantite'];
+                break;
+            case 'KM' : 
+                $km=$elements['quantite'];
+                break;
         }
     }
 }
@@ -70,13 +71,11 @@ else
     $mois = '';
     $annee = '';
 
-
     $montantValide = '';
     $repasmidi = '';
     $nuitees ='';
     /*$etape='';
-    $km = '';*/
-    
+    $km = '';*/ 
 }
 ?>
 	        
@@ -108,15 +107,15 @@ else
                     <input type="text" id="nuitees" name="nuitees" value= "<?php echo $nuitees; ?>"/>
                 </div>
                 <br>
-                <!--<div>
+                <div>
                     <label for="etape">Etape : </label>
                     <input type="text" id="etape" name="etape" value= "<?php echo $etape; ?>"/>
-                </div>-->
+                </div>
                 <br>
-                <!--<div>
+                <div>
                     <label for="km">Km : </label>
                     <input type="text" id="km" name="km" value= "<?php echo $km; ?>"/>
-                </div>-->
+                </div>
                 <br/>
                 
                 <div>
