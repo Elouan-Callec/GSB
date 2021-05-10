@@ -1,0 +1,38 @@
+.titre{
+    font-size: 30px;
+    margin: 0% 50px 20px 0px;
+    color: #388CDB;
+    background-color: #E1EEFF;
+}
+
+.titre2{
+    font-size: 25px;
+    font-weight: bold;
+    margin: 30px 50px 20px 0;
+}
+
+topGauche{
+    margin: 10px 50px 20px 0;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+topDroite{
+    margin: 10px 50px 20px 100px;
+}
+
+td{
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+    width: 10%;
+}
+
+.bordure{
+    border: 1px solid white;
+}
+
+body{
+    color: white;
+    background-color: #77AADD;
+}
