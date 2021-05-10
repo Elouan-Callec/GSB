@@ -1,0 +1,1 @@
+Les valeurs dans idForfait tels que REP, KM ou NUI devrait être des colonnes d'une table avec à l'interieur comme valeur les quantitées

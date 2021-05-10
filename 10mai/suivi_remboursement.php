@@ -9,6 +9,27 @@
 </head>
 
 <body>
+
+    <?php
+
+    include "mesFonctionsGenerales.php";
+    
+    $userReq = "SELECT idEtat, dateModif, montantValide, quantite 
+                FROM visiteurmedical
+                INNER JOIN fichefrais
+                ON visiteurmedical.id = fichefrais.idVisiteur 
+                JOIN lignefraisforfait
+                ON fichefrais.id = lignefraisforfait.idFicheFrais
+                JOIN forfait
+                ON lignefraisforfait.idForfait = forfait.id
+                WHERE visiteurmedical.id="2""
+
+    $userReq = $cnxBDD -> query($userReq);
+
+    while($userData = $userReq -> fetch_assoc()) {
+
+    ?>
+
     <div class="titre">
         Fiche de frais de :
     </div>
@@ -33,14 +54,18 @@
             <td>Remboursement</td>
         </tr>
         <tr>
-            <td>12</td>
+            <td>Pas fini</td>
             <td>3</td>
             <td>0</td>
             <td>250</td>
-            <td>Remboursé</td>
+            <td><?php echo $userData ['idEtat']; ?></td>
             <td>3/12/2010</td>
             <td>654.55€</td>
         </tr>
     </table>
+
+    <?php
+    }
+    ?> 
 
 </body>

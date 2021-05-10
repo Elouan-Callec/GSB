@@ -79,7 +79,6 @@ else
                     <input type="text" id="repasmidi" name="repasmidi" value= "<?php echo $repasmidi; ?>"/>
                     
                 </div>
-                <?php echo $repasmidi; ?>
                 <br>
                 <div>
                     <label for="nuitees">Nuitées : </label>
