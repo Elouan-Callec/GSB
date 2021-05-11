@@ -107,7 +107,7 @@ else
                     <input type="text" id="nuitees" name="nuitees" value= "<?php echo $nuitees; ?>"/>
                 </div>
                 <br>
-                <div>
+                <!--<div>
                     <label for="etape">Etape : </label>
                     <input type="text" id="etape" name="etape" value= "<?php echo $etape; ?>"/>
                 </div>
@@ -115,7 +115,7 @@ else
                 <div>
                     <label for="km">Km : </label>
                     <input type="text" id="km" name="km" value= "<?php echo $km; ?>"/>
-                </div>
+                </div>-->
                 <br/>
                 
                 <div>
