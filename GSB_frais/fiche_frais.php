@@ -43,8 +43,6 @@ if ( isset($_GET['BOmodif'] ) ==true)
                 WHERE idFicheFrais=".$_GET['id'].";";
     $get_data=$cnxBDD -> query($get_data);
     
-    var_dump 
-
     while ($elements=$get_data -> fetch_assoc()){     
         switch ($elements['idForfait']){
             case 'NUI':
