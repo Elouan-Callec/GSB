@@ -9,7 +9,6 @@
 
 <body>
 <?php
-
 include "mesFonctionsGenerales.php";
 
 /* On regarde si on est dans le cas d'une modification */
@@ -25,10 +24,9 @@ if ( isset($_GET['BOmodif'] ) ==true)
              FROM fichefrais
              WHERE id = ".$_GET['id'].";";
 
-    /*$nuitees="pas fini";
-    $repasmidi="pas fini";
-    $etape="pas fini";
-    $km="pas fini";*/
+    $nuitees=0;
+    $repasmidi=0;
+    
     $result = $cnxBDD->query($sql);
     $maLigne = $result->fetch_assoc();
     $identifiant = $maLigne['id'];
@@ -42,9 +40,11 @@ if ( isset($_GET['BOmodif'] ) ==true)
 
     $get_data="SELECT idForfait, quantite 
                 FROM lignefraisforfait 
-                WHERE idFichefrais = 3;";
+                WHERE idFicheFrais=".$_GET['id'].";";
     $get_data=$cnxBDD -> query($get_data);
     
+    var_dump 
+
     while ($elements=$get_data -> fetch_assoc()){     
         switch ($elements['idForfait']){
             case 'NUI':
@@ -53,12 +53,12 @@ if ( isset($_GET['BOmodif'] ) ==true)
             case 'REP':
                 $repasmidi=$elements['quantite'];
                 break;
-            case 'ETA' :
+            /*case 'ETA' :
                 $etape=$elements['quantite'];
                 break;
             case 'KM' : 
                 $km=$elements['quantite'];
-                break;
+                break;*/
         }
     }
 }
@@ -76,8 +76,8 @@ else
     $montantValide = '';
     $repasmidi = '';
     $nuitees = '';
-    $etape='';
-    $km = '';
+    /*$etape='';
+    $km = '';*/
 }
 ?>
 	        
@@ -98,6 +98,10 @@ else
                 
                 <p><h3>Frais au forfait : </h3></p>
                 
+                
+                <input type="hidden" id="id" name="id" value= "<?php echo $_GET['id']; ?>"/>
+                
+
                 <div>
                     <label for="repasmidi">Repas midi : </label>
                     <input type="text" id="repasmidi" name="repasmidi" value= "<?php echo $repasmidi; ?>"/>
@@ -109,7 +113,7 @@ else
                     <input type="text" id="nuitees" name="nuitees" value= "<?php echo $nuitees; ?>"/>
                 </div>
                 <br>
-                <div>
+                <!--<div>
                     <label for="etape">Etape : </label>
                     <input type="text" id="etape" name="etape" value= "<?php echo $etape; ?>"/>
                 </div>
@@ -117,7 +121,7 @@ else
                 <div>
                     <label for="km">Km : </label>
                     <input type="text" id="km" name="km" value= "<?php echo $km; ?>"/>
-                </div>
+                </div>-->
                 <br/>
                 
                 <div>
