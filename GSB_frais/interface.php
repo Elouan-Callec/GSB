@@ -7,8 +7,10 @@
         </head>
 
 <?php
+
 include "mesFonctionsGenerales.php";
 $cnxBDD = connexion();
+
 ?>
 
 <body> 
@@ -45,9 +47,11 @@ $cnxBDD = connexion();
         <tbody>
 
             <?php
-            $userReq ='SELECT * FROM visiteurmedical INNER JOIN fichefrais WHERE visiteurmedical.id=fichefrais.idVisiteur AND visiteurmedical.id="2" ORDER BY annee;';//supprimer le AND visiteurmedical quand l'utilisateur sera connecté
+            $userReq ='SELECT * FROM visiteurmedical INNER JOIN fichefrais WHERE visiteurmedical.id=fichefrais.idVisiteur
+             AND visiteurmedical.id="4" ORDER BY annee;';//supprimer le AND visiteurmedical quand l'utilisateur sera connecté
             $userReq = $cnxBDD -> query($userReq);
             while($userData = $userReq -> fetch_assoc()) {
+
             ?>
                 
         <tr>
@@ -68,7 +72,7 @@ $cnxBDD = connexion();
         
         <?php
             }
-        ?>  
+            ?>  
     
     </tbody>
     </table>
@@ -76,17 +80,4 @@ $cnxBDD = connexion();
 
 </div>
 </body>
-</html>
-
-<!-- 
-<td>
-    <a href="Delete.php?id= 
-        <form action='fiche_frais.php' method='get'>
-            <button type='submit' onclick=\"if(!confirm('Voulez-vous supprimer ce contact ?')) return false;\">
-            <img src="https://cours-informatique-gratuit.fr/wp-content/uploads/2014/05/corbeille-windows.png">
-            </button>
-        </form>      
-    </a>                                        
-</td>           
-            
-                                        
+</html>                                           
