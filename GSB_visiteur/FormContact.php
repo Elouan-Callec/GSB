@@ -5,7 +5,6 @@
 	<title>Création de Contact</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" type="text/css" href="default.css">
-	<link rel="stylesheet" type="text/css" href="default.css">
 </head>
 
 <body>
@@ -28,7 +27,7 @@
 
         $result = $cnxBDD->query($sql);
 		$maLigne = $result->fetch_assoc();
-		$identifiant = $maLigne['id']; //'id' provient de Identifiant en dessous
+		$identifiant = $maLigne['id'];
 		$nom = $maLigne['nom'];
 		$prenom= $maLigne['prenom'];
 		$adresse= $maLigne['adresse'];

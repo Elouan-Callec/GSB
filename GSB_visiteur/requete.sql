@@ -374,3 +374,9 @@ VALUES ('test','test','adresse',
 ERREUR SQL : 15 Apr 2021 - 16:14:44.000000 --> INSERT INTO visiteurmedical (nom,prenom,adresse,ville,dateEmbauche,cp,login,mdp)
 VALUES ('test','test','adresse',
 'ville','07-12-2020','code postal','login','mdp'); : (Data too long for column 'cp' at row 1) 
+ERREUR SQL : 11 May 2021 - 16:27:28.000000 --> SELECT login, mdp 
+        FROM visiteurmedical
+        WHERE login = fdsfsdf AND mdp = sdfsdfsd; : (Unknown column 'fdsfsdf' in 'where clause') 
+ERREUR SQL : 11 May 2021 - 16:29:17.000000 --> SELECT login, mdp 
+        FROM visiteurmedical
+        WHERE login = jkhkj AND mdp = hjkhjk; : (Unknown column 'jkhkj' in 'where clause') 

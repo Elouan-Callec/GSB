@@ -21,7 +21,7 @@ $totalkm=$km*getForfait('K4E');
 
 //Execution de la requete
 
-$idVisiteur=4;
+$idVisiteur=2;
 
 $sql ="SELECT id FROM fichefrais WHERE idVisiteur='".$idVisiteur."' ORDER BY id DESC LIMIT 1;";
 
