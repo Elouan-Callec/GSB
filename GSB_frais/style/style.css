@@ -53,20 +53,19 @@ td{
 /* Haut de page */
 
 .HP{
-    font-size: 35px;
+    font-size: 45px;
     font-weight: bold;
     color: #5991D5;
     text-align: left;
     background-color:white;
-    padding: 10px 20px;
-    margin: 0px;
+    padding: 1px 20px;
 }
 
 .logo{
     position: absolute;
     top: 0;
     right: 0;
-    margin: 15px 20px;
+    margin: 20px 20px;
     width: 150px;
 }
 
