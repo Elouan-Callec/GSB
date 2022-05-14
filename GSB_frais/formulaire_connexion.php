@@ -1,4 +1,5 @@
 <!doctype html>
+<html>
 
 <head>
     <title>Connexion</title>
@@ -35,3 +36,5 @@
         </div>
     </form>
 </body>
+
+</html>
