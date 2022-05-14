@@ -1,0 +1,90 @@
+body{
+    color: white;
+    background-color: #77AADD;
+    margin: 0px;
+}
+
+.bouton{
+    width: 150px;
+    height: 30px;
+    border-radius: 5px;
+    border: solid;
+    border-width: 2px;
+    border-color: #41baf1;
+    margin: 0 auto;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.titre{
+    font-size: 30px;
+    margin: 0% 50px 20px 0px;
+    color: #388CDB;
+    background-color: #E1EEFF;
+}
+
+.titre2{
+    font-size: 25px;
+    font-weight: bold;
+    margin: 30px 50px 20px 0;
+}
+
+.topGauche{
+    margin: 10px 50px 20px 0;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.topDroite{
+    margin: 10px 50px 20px 100px;
+}
+
+td{
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+    width: 10%;
+}
+
+.bordure{
+    border: 1px solid white;
+}
+
+/* Haut de page */
+
+.HP{
+    font-size: 35px;
+    font-weight: bold;
+    color: #5991D5;
+    text-align: left;
+    background-color:white;
+    padding: 10px 20px;
+    margin: 0px;
+}
+
+.logo{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 15px 20px;
+    width: 150px;
+}
+
+/* Placement des elements de la page choix de connexion */
+
+.centrerElement{
+    margin-top: 15%;
+    font-size: 40px;
+    display: block;
+    text-align: center;
+}
+
+.divGauche{
+    float:left;
+    margin-left: 32%;
+}
+
+.divDroite{
+    float: right;
+    margin-right: 32%;
+}

@@ -2,10 +2,10 @@
 
 function connexion(){
     $host = "127.0.0.1";
-        $user = "root";
-        $password = "password";
-        $dbname = "gsb_frais";
-        $port ="3307";
+    $user = "root";
+    $password = "";
+    $dbname = "gsb_frais";
+    $port ="3306";
 
         $mysqli = new mysqli($host, $user, $password, $dbname, $port);
         if ($mysqli->connect_errno) {
