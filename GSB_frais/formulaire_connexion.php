@@ -1,6 +1,7 @@
 <!-- Connexion a la base de donnees -->
 <?php
-include "connexionBDD.php"
+include "connexionBDD.php";
+session_start();
 ?>
 
 <!doctype html>
@@ -17,7 +18,7 @@ include "connexionBDD.php"
     <!-- Bande en haut de page -->
     <div class="HP">
         <p>Identification</p>
-        <img src="style/gsb logo.png" class="logo">
+        <img src="style/gsb logo.png" class="logoHP">
     </div>
 
 
@@ -26,9 +27,11 @@ include "connexionBDD.php"
     // Récupération du login et password du formulaire
     if (isset($_POST['login'])) {
         $login = $_POST['login'];
+        $_SESSION['login'] = $_POST['login'];
     }
     if (isset($_POST['password'])) {
         $password = $_POST['password'];
+        $_SESSION['password'] = $_POST['password'];
     }
 
     // Requête pour rechercher le login et password du visiteur
