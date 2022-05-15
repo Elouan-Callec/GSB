@@ -25,8 +25,6 @@ body#accueil {
     background: #efefefb4;
 }
 
-
-
 .logo {
     width: 35px;
     margin-left: auto;
@@ -59,16 +57,6 @@ body#accueil {
     margin: auto;
 }
 
-.topGauche {
-    margin: 10px 50px 20px 0;
-    font-size: 30px;
-    font-weight: bold;
-}
-
-.topDroite {
-    margin: 10px 50px 20px 100px;
-}
-
 
 /* Ajouter */
 
@@ -90,11 +78,16 @@ body#accueil {
 
 /* Tableau */
 
-th {
-    border: 1px solid black;
+table {
+    border-collapse: separate;
+    width: 100%;
+}
+
+thead {
     padding: 10px;
-    text-align: center;
     width: 10%;
+    height: 35px;
+    text-align: center;
     background: linear-gradient(white, #EDF5FC);
     color: black;
 }
@@ -107,7 +100,6 @@ td {
     background-color: white;
     color: black;
 }
-
 
 
 /* Formulaire de connexion */
@@ -177,4 +169,18 @@ td {
     float: right;
     margin-right: 32%;
     font-size: 40px;
+}
+
+
+
+
+
+.topGauche {
+    margin: 10px 50px 20px 0;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.topDroite {
+    margin: 10px 50px 20px 100px;
 }

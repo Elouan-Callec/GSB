@@ -40,7 +40,7 @@ session_start();
 
 
     <div class="tableau">
-        <table class="t1 t2" width="100%">
+        <table>
             <thead>
                 <tr>
                     <th>Identifiant</th>
