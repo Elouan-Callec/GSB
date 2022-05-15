@@ -1,83 +1,96 @@
-<!doctype html>
-
-        <head>
-            <title>gsb</title>
-            <meta charset="utf-8"/>
-            <link type="text/css" rel="stylesheet" href="default.css" />
-        </head>
-
+<!-- Connexion a la base de donnees -->
 <?php
-
-include "mesFonctionsGenerales.php";
-$cnxBDD = connexion();
-
+include "connexionBDD.php";
+session_start();
 ?>
 
-<body> 
+<!doctype html>
+<html>
+
+<head>
+    <title>Accueil Visiteur Médical</title>
+    <meta charset="utf-8" />
+    <link href="style/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body id="accueil">
+
+    <!-- Bande en haut de page -->
+    <div class="HP">
+        <p>Accueil</p>
+        <img src="style/gsb logo.png" class="logoHP">
+    </div>
 
 
-<div class="fond">
-<p><h1>Fiche de frais de :</h1></p>
+    <?php
+    $req = $bdd->query('SELECT nom FROM visiteurmedical 
+                        WHERE visiteurmedical.login = ' . $_SESSION['login']);
+    $userData = $req->fetch();
+    ?>
 
 
-<p>
-<a href="fiche_frais.php">
-<img src="https://image.flaticon.com/icons/png/512/32/32360.png" class="logoajouter"></a>
-</p>
+    <div>
+        <p class="titrePage">Fiche de frais de : <?php echo $userData['nom']; ?></p>
 
+        <div class="logoAjouter">
+            <p>
+                <label>Ajouter</label>
+                <a href="fiche_frais.php"><img src="style/bouton/add.png"></a>
+            </p>
+        </div>
 
+        <div class="tableau">
+            <table class="t1 t2" width="100%">
+                <thead>
+                    <tr>
+                        <th>Identifiant</th>
+                        <th>Nom</th>
+                        <th>Prenom</th>
+                        <th>Mois</th>
+                        <th>Année</th>
+                        <th>Montant total</th>
+                        <th>Etat</th>
+                        <th>Supprimer</th>
+                        <th>Modifier</th>
+                        <th>Voir</th>
+                    </tr>
+                </thead>
+                <tbody>
 
+                    <?php
+                    $req = $bdd->prepare('SELECT * FROM visiteurmedical 
+                        INNER JOIN fichefrais 
+                        ON visiteurmedical.id = fichefrais.idVisiteur
+                        WHERE visiteurmedical.login = ? 
+                        ORDER BY annee');
 
-<div class="tableau">
-    <table class="t1 t2" width="100%">
-        <thead>
-        <tr>
-            <th>Identifiant</th>
-            <th>Nom</th>
-            <th>Prenom</th>
-            <th>Mois</th>
-            <th>Année</th>
-            <th>Montant total</th>
-            <th>Etat</th>
-            <th>Supprimer</th>
-            <th>Modifier</th>
-            <th>Voir</th>
-        </tr>
-        </thead>
-        <tbody>
+                    $req->execute(array(htmlspecialchars($_SESSION['login'])));
 
-            <?php
-            $userReq ='SELECT * FROM visiteurmedical INNER JOIN fichefrais WHERE visiteurmedical.id=fichefrais.idVisiteur
-             AND visiteurmedical.id="4" ORDER BY annee;';//supprimer le AND visiteurmedical quand l'utilisateur sera connecté
-            $userReq = $cnxBDD -> query($userReq);
-            while($userData = $userReq -> fetch_assoc()) {
+                    while ($donnes = $req->fetch()) {
+                    ?>
 
-            ?>
-                
-        <tr>
-            <td><?php echo $userData ['idVisiteur']; ?></td>
-            <td><?php echo $userData ['nom']; ?></td>
-            <td><?php echo $userData ['prenom']; ?></td>
-            <td><?php echo $userData ['mois']; ?></td>
-            <td><?php echo $userData ['annee']; ?></td>
-            <td><?php echo $userData ['montantValide']; ?></td>
-            <td><?php echo $userData ['idEtat']; ?></td>
+                        <tr>
+                            <td><?php echo $donnes['idVisiteur']; ?></td>
+                            <td><?php echo $donnes['nom']; ?></td>
+                            <td><?php echo $donnes['prenom']; ?></td>
+                            <td><?php echo $donnes['mois']; ?></td>
+                            <td><?php echo $donnes['annee']; ?></td>
+                            <td><?php echo $donnes['montantValide']; ?></td>
+                            <td><?php echo $donnes['idEtat']; ?></td>
+                            <td><a href="Delete.php"><img src="style/bouton/corbeille.png" class='logo'></a></td>
+                            <td><a href="fiche_frais.php"><img src="style/bouton/modify.png" class='logo'></a></td>
+                            <td><a href="suivi_remboursement.php"><img src="style/bouton/voir.png" class='logo'></a></td>
+                        </tr>
 
-            <td><a href="Delete.php?id= <?php echo $userData ['id']; ?>"><img src="https://cours-informatique-gratuit.fr/wp-content/uploads/2014/05/corbeille-windows.png" class='logo'></a></td>
-            <td><a href="fiche_frais.php?id=<?php echo $userData ['id']; ?>&BOmodif=1"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWRISakacXylDQFihhmvVa6OgKa-j40CTq0Q&usqp=CAU" class='logo'></a></td>
-            <td><a href="suivi_remboursement.php?id=<?php echo $userData ['id']; ?>&BOmodif=1"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWRISakacXylDQFihhmvVa6OgKa-j40CTq0Q&usqp=CAU" class='logo'></a></td>
-            
-            
-        </tr>
-        
-        <?php
-            }
-            ?>  
-    
-    </tbody>
-    </table>
-</div>
+                    <?php
+                    }
+                    ?>
 
-</div>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
 </body>
-</html>                                           
+
+</html>

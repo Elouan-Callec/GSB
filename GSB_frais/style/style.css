@@ -4,6 +4,11 @@ body {
     margin: 0px;
 }
 
+body#accueil {
+    background: linear-gradient(0.25turn, #C2DCFE, #E0EDFF);
+    color: #398BDA;
+}
+
 .bouton {
     width: 150px;
     height: 30px;
@@ -16,8 +21,21 @@ body {
     font-size: 15px;
 }
 
-.bouton:hover{
+.bouton:hover {
     background: #efefefb4;
+}
+
+.logo {
+    width: 35px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.logoAjouter {
+    width: 3%;
+    display: block;
+    float: right;
 }
 
 .centre {
@@ -26,10 +44,9 @@ body {
     text-align: center;
 }
 
-.titre2 {
-    font-size: 25px;
-    font-weight: bold;
-    margin: 30px 50px 20px 0;
+.titrePage {
+    font-size: 40px;
+    margin: 10px auto auto 10px;
 }
 
 .topGauche {
@@ -42,21 +59,32 @@ body {
     margin: 10px 50px 20px 100px;
 }
 
+
+/* Tableau */
+
+th{
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+    width: 10%;
+    background: linear-gradient(white, #EDF5FC);
+    color: black;
+}
+
 td {
     border: 1px solid black;
     padding: 10px;
     text-align: center;
     width: 10%;
+    background-color: white;
+    color: black;
 }
 
-.bordure {
-    border: 1px solid white;
-}
 
 
 /* Formulaire de connexion */
 
-.titreFormulaire{
+.titreFormulaire {
     text-align: center;
     font-size: 35px;
     color: black;
@@ -69,13 +97,13 @@ td {
     font-size: 25px;
     background: linear-gradient(#a4e2fa, #8ec7de);
     border: solid;
-    border-radius: 7px;
+    border-radius: 5px;
     border-color: black;
-    border-width: 2px;
+    border-width: 3px;
     background: linear-gradient(#7AD3FE, #84E9FE);
 }
 
-.case{
+.case {
     border-radius: 4px;
     border: 1px solid;
     border-color: #2a3449;
@@ -94,7 +122,7 @@ td {
     padding: 1px 20px;
 }
 
-.logo {
+.logoHP {
     position: absolute;
     top: 0;
     right: 0;
