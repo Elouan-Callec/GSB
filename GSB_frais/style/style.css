@@ -25,17 +25,27 @@ body#accueil {
     background: #efefefb4;
 }
 
+
+
 .logo {
     width: 35px;
-    display: block;
     margin-left: auto;
     margin-right: auto
 }
 
-.logoAjouter {
-    width: 3%;
-    display: block;
+.gauche {
+    float: left;
+    margin: 10px 10px;
+}
+
+.milieu {
+    display: inline-block;
+    margin: 10px 20px;
+}
+
+.droite {
     float: right;
+    margin: 10px 10px;
 }
 
 .centre {
@@ -46,7 +56,7 @@ body#accueil {
 
 .titrePage {
     font-size: 40px;
-    margin: 10px auto auto 10px;
+    margin: auto;
 }
 
 .topGauche {
@@ -60,9 +70,27 @@ body#accueil {
 }
 
 
+/* Ajouter */
+
+.divAjouter {
+    font-size: 30px;
+    margin: 4px auto;
+}
+
+.labelAjouter {
+    vertical-align: middle;
+}
+
+.logoAjouter {
+    vertical-align: middle;
+    margin: auto 10px;
+    width: 40px;
+}
+
+
 /* Tableau */
 
-th{
+th {
     border: 1px solid black;
     padding: 10px;
     text-align: center;

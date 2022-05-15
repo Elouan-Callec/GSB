@@ -28,68 +28,66 @@ session_start();
     $userData = $req->fetch();
     ?>
 
-
-    <div>
+    <div class="gauche">
         <p class="titrePage">Fiche de frais de : <?php echo $userData['nom']; ?></p>
+    </div>
+    <div class="milieu">
+        <p class="divAjouter">
+            <label class="labelAjouter">Ajouter</label>
+            <a href="fiche_frais.php"><img src="style/bouton/add.png" class="logoAjouter"></a>
+        </p>
+    </div>
 
-        <div class="logoAjouter">
-            <p>
-                <label>Ajouter</label>
-                <a href="fiche_frais.php"><img src="style/bouton/add.png"></a>
-            </p>
-        </div>
 
-        <div class="tableau">
-            <table class="t1 t2" width="100%">
-                <thead>
-                    <tr>
-                        <th>Identifiant</th>
-                        <th>Nom</th>
-                        <th>Prenom</th>
-                        <th>Mois</th>
-                        <th>Année</th>
-                        <th>Montant total</th>
-                        <th>Etat</th>
-                        <th>Supprimer</th>
-                        <th>Modifier</th>
-                        <th>Voir</th>
-                    </tr>
-                </thead>
-                <tbody>
+    <div class="tableau">
+        <table class="t1 t2" width="100%">
+            <thead>
+                <tr>
+                    <th>Identifiant</th>
+                    <th>Nom</th>
+                    <th>Prenom</th>
+                    <th>Mois</th>
+                    <th>Année</th>
+                    <th>Montant total</th>
+                    <th>Etat</th>
+                    <th>Supprimer</th>
+                    <th>Modifier</th>
+                    <th>Voir</th>
+                </tr>
+            </thead>
+            <tbody>
 
-                    <?php
-                    $req = $bdd->prepare('SELECT * FROM visiteurmedical 
+                <?php
+                $req = $bdd->prepare('SELECT * FROM visiteurmedical 
                         INNER JOIN fichefrais 
                         ON visiteurmedical.id = fichefrais.idVisiteur
                         WHERE visiteurmedical.login = ? 
                         ORDER BY annee');
 
-                    $req->execute(array(htmlspecialchars($_SESSION['login'])));
+                $req->execute(array(htmlspecialchars($_SESSION['login'])));
 
-                    while ($donnes = $req->fetch()) {
-                    ?>
+                while ($donnes = $req->fetch()) {
+                ?>
 
-                        <tr>
-                            <td><?php echo $donnes['idVisiteur']; ?></td>
-                            <td><?php echo $donnes['nom']; ?></td>
-                            <td><?php echo $donnes['prenom']; ?></td>
-                            <td><?php echo $donnes['mois']; ?></td>
-                            <td><?php echo $donnes['annee']; ?></td>
-                            <td><?php echo $donnes['montantValide']; ?></td>
-                            <td><?php echo $donnes['idEtat']; ?></td>
-                            <td><a href="Delete.php"><img src="style/bouton/corbeille.png" class='logo'></a></td>
-                            <td><a href="fiche_frais.php"><img src="style/bouton/modify.png" class='logo'></a></td>
-                            <td><a href="suivi_remboursement.php"><img src="style/bouton/voir.png" class='logo'></a></td>
-                        </tr>
+                    <tr>
+                        <td><?php echo $donnes['idVisiteur']; ?></td>
+                        <td><?php echo $donnes['nom']; ?></td>
+                        <td><?php echo $donnes['prenom']; ?></td>
+                        <td><?php echo $donnes['mois']; ?></td>
+                        <td><?php echo $donnes['annee']; ?></td>
+                        <td><?php echo $donnes['montantValide']; ?></td>
+                        <td><?php echo $donnes['idEtat']; ?></td>
+                        <td><a href="Delete.php"><img src="style/bouton/corbeille.png" class='logo'></a></td>
+                        <td><a href="fiche_frais.php"><img src="style/bouton/modify.png" class='logo'></a></td>
+                        <td><a href="suivi_remboursement.php"><img src="style/bouton/voir.png" class='logo'></a></td>
+                    </tr>
 
-                    <?php
-                    }
-                    ?>
+                <?php
+                }
+                ?>
 
-                </tbody>
-            </table>
-        </div>
-
+            </tbody>
+        </table>
     </div>
 </body>
 
