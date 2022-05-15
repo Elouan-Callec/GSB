@@ -34,7 +34,7 @@ session_start();
     <div class="milieu">
         <p class="divAjouter">
             <label class="labelAjouter">Ajouter</label>
-            <a href="fiche_frais.php"><img src="style/bouton/add.png" class="logoAjouter"></a>
+            <a href="ajoutFicheFrais.php"><img src="style/bouton/add.png" class="logoAjouter"></a>
         </p>
     </div>
 
