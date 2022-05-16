@@ -16,13 +16,6 @@ function connexion(){
 
 }
        
-function erreurSQL() {
-    global $cnxBDD;
-    
-    $err = mysql_errno($link) . ": " . mysql_error($cnxBDD). "\n";
-    return $err;
-}
-
 function afficheErreur($sql, $erreur) {
 
 	$uneChaine = "ERREUR SQL : ".date("j M Y - G:i:s.u --> ").$sql." : ($erreur) \r\n";
