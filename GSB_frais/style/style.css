@@ -11,7 +11,7 @@ body#accueil {
 }
 
 .bouton {
-    width: 150px;
+    width: 200px;
     height: 30px;
     border-radius: 5px;
     border: solid;
@@ -31,6 +31,18 @@ body#accueil {
     margin-left: auto;
     margin-right: auto
 }
+
+.titrePage {
+    font-size: 40px;
+    margin: auto;
+}
+
+#titrePageGestionFrais {
+    font-weight: bold;
+}
+
+
+/* Alignement sur la page */
 
 .gauche {
     float: left;
@@ -59,15 +71,6 @@ body#accueil {
     margin: 1px 1px;
     padding: 1px;
     text-align: center;
-}
-
-.titrePage {
-    font-size: 40px;
-    margin: auto;
-}
-
-#titrePageGestionFrais {
-    font-weight: bold;
 }
 
 
