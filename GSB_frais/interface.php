@@ -23,9 +23,10 @@ session_start();
 
 
     <?php
-    $req = $bdd->query('SELECT nom FROM visiteurmedical 
+    $req = $bdd->query('SELECT id, nom FROM visiteurmedical 
                         WHERE visiteurmedical.login = ' . $_SESSION['login']);
     $userData = $req->fetch();
+    $_SESSION['idVisiteur'] = $userData['id'];
     ?>
 
     <div class="gauche">
