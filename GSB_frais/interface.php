@@ -59,7 +59,7 @@ session_start();
             <tbody>
 
                 <?php
-                $req = $bdd->prepare('SELECT * FROM visiteurmedical 
+                $req = $bdd->prepare('SELECT nom, prenom, mois, annee, montantValide, idEtat, fichefrais.id FROM visiteurmedical 
                         INNER JOIN fichefrais 
                         ON visiteurmedical.id = fichefrais.idVisiteur
                         WHERE visiteurmedical.login = ? 
@@ -67,19 +67,19 @@ session_start();
 
                 $req->execute(array(htmlspecialchars($_SESSION['login'])));
 
-                while ($donnes = $req->fetch()) {
+                while ($donnees = $req->fetch()) {
                 ?>
 
                     <tr>
-                        <td><?php echo $donnes['idVisiteur']; ?></td>
-                        <td><?php echo $donnes['nom']; ?></td>
-                        <td><?php echo $donnes['prenom']; ?></td>
-                        <td><?php echo $donnes['mois']; ?></td>
-                        <td><?php echo $donnes['annee']; ?></td>
-                        <td><?php echo $donnes['montantValide']; ?></td>
-                        <td><?php echo $donnes['idEtat']; ?></td>
+                        <td><?php echo $donnees['id']; ?></td>
+                        <td><?php echo $donnees['nom']; ?></td>
+                        <td><?php echo $donnees['prenom']; ?></td>
+                        <td><?php echo $donnees['mois']; ?></td>
+                        <td><?php echo $donnees['annee']; ?></td>
+                        <td><?php echo $donnees['montantValide']; ?></td>
+                        <td><?php echo $donnees['idEtat']; ?></td>
                         <td><a href="Delete.php"><img src="style/bouton/corbeille.png" class='logo'></a></td>
-                        <td><a href="fiche_frais.php"><img src="style/bouton/modify.png" class='logo'></a></td>
+                        <td><a href="modifFicheFrais.php?id=<?php echo $donnees['id']; ?>"><img src="style/bouton/modify.png" class='logo'></a></td>
                         <td><a href="suivi_remboursement.php"><img src="style/bouton/voir.png" class='logo'></a></td>
                     </tr>
 
