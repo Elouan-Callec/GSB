@@ -40,10 +40,10 @@ session_start();
             </div>
             <div class="milieu" id="milieuGestionFrais">
                 <label for="mois">Mois (2 chiffres) : </label>
-                <input type="text" id="mois" name="mois" value="<?php echo $mois; ?>" disabled="disabled" />
+                <input type="text" id="mois" name="mois" value="<?php echo $mois; ?>" readonly />
 
                 <label for="annee">Années (4 chiffres) : </label>
-                <input type="text" id="annee" name="annee" value="<?php echo $annee; ?>" disabled="disabled" />
+                <input type="text" id="annee" name="annee" value="<?php echo $annee; ?>" readonly />
             </div>
         </section>
 
@@ -52,31 +52,28 @@ session_start();
         <section>
             <h1>Frais au forfait</h1>
 
-            <input type="hidden" id="id" name="id" value="<?php echo $_GET['id']; ?>" />
-
-
             <div>
-                <label for="repasmidi">Repas midi : </label>
-                <input type="text" id="repasmidi" name="repasmidi"/>
+                <label for="repasmidi">Repas midi :</label>
+                <input type="text" id="repasmidi" name="repasmidi" />
 
             </div>
             <div>
-                <label for="nuitees">Nuitées : </label>
-                <input type="text" id="nuitees" name="nuitees"/>
+                <label for="nuitees">Nuitées :</label>
+                <input type="text" id="nuitees" name="nuitees" />
             </div>
             <div>
-                <label for="etape">Etape : </label>
-                <input type="text" id="etape" name="etape"/>
+                <label for="etape">Etape :</label>
+                <input type="text" id="etape" name="etape" />
             </div>
             <div>
-                <label for="km">Km : </label>
-                <input type="text" id="km" name="km"/>
+                <label for="km">Km :</label>
+                <input type="text" id="km" name="km" />
             </div>
             <br />
         </section>
 
         <div>
-            <input type="submit" value="Soumettre la requête">
+            <input type="submit" value="Soumettre la requête" class="bouton">
         </div>
     </form>
     </div>
