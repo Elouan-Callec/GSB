@@ -21,13 +21,25 @@ session_start();
         <img src="style/gsb logo.png" class="logoHP">
     </div>
 
+    <?php
+    $reqDate = $bdd->prepare("SELECT mois, annee 
+                              FROM fichefrais 
+                              WHERE id = :id");
+
+    $reqDate->execute(array(
+        'id' => $_GET['id']
+    ));
+
+    $donneesDate = $reqDate->fetch();
+    ?>
+
     <div class="gauche">
         <p class="titrePage">Fiche de frais de : <?php echo $_GET['nom']; ?></p>
     </div>
     <div class="milieu">
         <p class="divAjouter">
             <label class="labelAjouter">|Mois/Année: </label>
-            <label class="logoAjouter">Test</label>
+            <label class="logoAjouter"><?php echo $donneesDate['mois']." / ".$donneesDate['annee']; ?></label>
         </p>
         <br />
     </div>
