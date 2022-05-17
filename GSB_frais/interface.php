@@ -80,7 +80,7 @@ session_start();
                         <td><?php echo $donnees['idEtat']; ?></td>
                         <td><a href="Delete.php"><img src="style/bouton/corbeille.png" class='logo'></a></td>
                         <td><a href="modifFicheFrais.php?id=<?php echo $donnees['id']; ?>"><img src="style/bouton/modify.png" class='logo'></a></td>
-                        <td><a href="suivi_remboursement.php?id=<?php echo $donnees['id']; ?>"><img src="style/bouton/voir.png" class='logo'></a></td>
+                        <td><a href="suivi_remboursement.php?id=<?php echo $donnees['id']; ?>&nom=<?php echo $donnees['nom']; ?>"><img src="style/bouton/voir.png" class='logo'></a></td>
                     </tr>
 
                 <?php
